@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include<math.h>
+
+int main()
+{
+    double x = 0,y = 0,quaterPi = 0, area = 0 , interval=0, pi=0;
+    interval = 0.00001;
+    while(x<1){
+        y = sqrt(1-(x*x)); 
+        quaterPi += y;
+        x += interval;
+    }
+    quaterPi = quaterPi * interval;
+    pi = quaterPi * 4.0;
+    double actualPi = (double)22.0/7.0;
+    printf("pi/4 %f pi %f Actual value %f",quaterPi,pi,actualPi);
+    return 0;
+}
